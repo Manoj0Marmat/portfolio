@@ -12,9 +12,9 @@ const config: DocsThemeConfig = {
     </>
   ),
   project: {
-    link: "https://github.com/Manoj0Marmat/what-i-learned-notes",
+    link: "https://github.com/Manoj0Marmat/portfolio",
   },
-  docsRepositoryBase: "https://github.com/Manoj0Marmat/what-i-learned-notes",
+  docsRepositoryBase: "https://github.com/Manoj0Marmat/portfolio",
    head: (
     <>
        <link rel="icon" href="https://i.ibb.co/Dk0L0Wd/logo.png" type="image/x-icon"></link>
