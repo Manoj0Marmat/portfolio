@@ -1,15 +1,19 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
+  "index": {
+    "title": "Portfolio",
+    "type": "page"
+  },
+
+  "intro": {
+    "title": "What I Learned",
     "type": "page"
   },
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://www.linkedin.com/in/manoj-marmat/",
     "newWindow": true
-  }
+  },
+  "topics": "Topics",
+  "sub-topics": "Sub Topics"
 }

@@ -1,0 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Bigshot+One);
+.container {
+  display: flex;
+  justify-content: center;
+}
+.text {
+  font-family: "Bigshot One", serif;
+  font-size: 40px;
+}

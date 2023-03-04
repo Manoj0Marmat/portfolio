@@ -1,0 +1,99 @@
+---
+title: Composition
+authors: ["Manoj Marmat"]
+---
+
+# Inheritance
+
+## Inheritance with respect to Non-Static Member
+
+The process of occuring the properties & behaviours of a super class into the subclass object with the help of
+`extends` keyword
+
+example
+
+###### super class Blueprint
+
+```java
+    class vehicle {
+        public void move(){
+            System.out.println("vehicle moves...");
+        }
+    }
+```
+
+###### sub class class Blueprint
+
+```java
+    class Car extends Vehicle{
+        public void drifting(){
+            System.out.println("zeeewwewwww");
+        }
+    }
+```
+
+###### user logic class
+
+```java
+    class CheckInheritance{
+        public static void main(String[] args) {
+            Car car1 = new Car(); // sub-class object
+            car1.move(); // super-class member
+            car1.drifting(); // sub-class member
+        }
+    }
+```
+
+> Every java program exhibts inheritance
+> in java by automattically extending object class if a dev forgets to write it.
+> Object class consisting of 11 non-static methods will be inherited to the objects
+> of any class & it is considers as supermost class
+
+## Inheritance with respect to Static Members
+
+###### super class Blueprint
+
+```java
+    class A{
+        static int i = 10;
+        int j = 20;
+    }
+```
+
+###### sub class class Blueprint
+
+```java
+    class B extends A{
+        static int k = 30;
+        int l = 40;
+    }
+```
+
+###### user logic class
+
+```java
+    class User{
+        public static void main(String[] args) {
+            B obj = new B(); // sub-class object
+            // obj is sub-class object reference variable
+            System.out.println(obj.toString); // non-static super-most class members by subclass obj refs var
+            System.out.println(obj.j); // non-static super-class members by sub-class obj ref var
+            System.out.println(obj.l); // non-static sub-class members by sub-class obj ref var
+            System.out.println(obj.i); // static super-class members by sub-class obj ref var
+            System.out.println(obj.k); // static sub-class members by sub-class obj ref var
+        }
+    }
+```
+
+> Static members of any class can never be inherited to the subclass object
+> but we can acess the static members of super class & subclass by the subclass object
+> reference variable since the class static area of the subclass is connected by the
+> subclass object and also it has direct reference to class static area of super class.
+
+## super()
+
+1. It is a first default statement within the constructor which is use to call the constructor of
+   the super-class
+2. `super()` will not be added if a dev adds `this()` statement as a first statement within the constructor
+3. Whenever `super()` is calling the constructor of super class then we must design the `super()` having actual
+   args must match with foraml args of the super class constructor otherwise we get sumantic Compile Time Error

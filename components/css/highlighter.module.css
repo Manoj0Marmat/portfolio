@@ -1,0 +1,11 @@
+.highlight {
+  transition: background-color 0.5s ease;
+  color: #006be6;
+  font-weight: 900;
+  cursor: none;
+}
+
+.highlight:hover {
+  color: #015bc2;
+  text-decoration: underline;
+}

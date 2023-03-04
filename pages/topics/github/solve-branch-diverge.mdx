@@ -1,0 +1,19 @@
+---
+title: Solve Branch Diverge
+authors: ["Manoj Marmat"]
+---
+
+# Divergent Branches
+
+This error occurs when we trying to merge two branches that have [diverged](/sub-topics/diverge).
+
+##### Message
+
+> [Error]
+> fatal: Need to specify how to [reconcile](/sub-topics/reconciling) divergent branches.
+
+##### Steps to Resolve
+
+1. `git merge <branch_name>`
+2. `git rebase <branch_name>`
+3. `git merge --abort`

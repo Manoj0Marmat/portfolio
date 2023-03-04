@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.imgwrapper {
+  border-radius: 50%;
+}
+
+.img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  border-radius: 50%;
+  filter: brightness(1.3);
+  transition: border-color 0.9s ease-in-out;
+}
+
+.img:hover {
+  filter: none;
+}
