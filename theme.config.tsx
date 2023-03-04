@@ -10,7 +10,6 @@ const config: DocsThemeConfig = {
       </span>
     </>
   ),
-  search: "",
   project: {
     link: "https://github.com/Manoj0Marmat/what-i-learned-notes",
   },
