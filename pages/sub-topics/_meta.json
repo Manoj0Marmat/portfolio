@@ -2,7 +2,7 @@
   "diverge": "Diverge Situation Github",
   "reconciling": "Reconciling Process Github",
   "jdbc-driver": "JDBC Driver Jdbc",
-  "ways-fire-query": "Ways To Fire Query Jdbc",
+  "ways-fire-query": "Ways To Create Statement Jdbc",
   "ways-execute-query": "Execute Methods Jdbc",
   "process-result": "Process The Result Jdbc",
   "result-set": "ResultSet Method Jdbc"
