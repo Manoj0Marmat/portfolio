@@ -1,5 +1,6 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
+import icon from "./public/logo.png"
 
 const config: DocsThemeConfig = {
   // logo: <span>What I Learned</span>,
@@ -14,10 +15,14 @@ const config: DocsThemeConfig = {
     link: "https://github.com/Manoj0Marmat/what-i-learned-notes",
   },
   docsRepositoryBase: "https://github.com/Manoj0Marmat/what-i-learned-notes",
+   head: (
+    <>
+       <link rel="icon" href="https://i.ibb.co/Dk0L0Wd/logo.png" type="image/x-icon"></link>
+    </>
+  ),
   footer: {
     text: "Maintained by Manoj Marmat.",
   },
-  // primaryHue: 50,
 };
 
 export default config;
