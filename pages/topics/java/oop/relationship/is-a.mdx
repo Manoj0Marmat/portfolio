@@ -1,5 +1,5 @@
 ---
-title: Inheritance
+title: Is-a
 authors: ["Manoj Marmat"]
 ---
 
@@ -92,8 +92,11 @@ example
 
 ## super()
 
-1. It is a first default statement within the constructor which is use to call the constructor of
-   the super-class
-2. `super()` will not be added if a dev adds `this()` statement as a first statement within the constructor
-3. Whenever `super()` is calling the constructor of super class then we must design the `super()` having actual
-   args must match with foraml args of the super class constructor otherwise we get sumantic Compile Time Error
+1.  It is a first default statement within the constructor which is use to call the constructor of
+    the super-class.
+2.  `super()` will not be added if a dev adds `this()` statement as a first statement within the constructor.
+3.  Whenever `super()` is calling the constructor of super class then we must design the `super()` having actual
+    args must match with foraml args of the super class constructor otherwise we get sumantic Compile Time Error.
+
+> we cannot have `this()` & `super()` within the same constructor but it is possible
+> to have them within the same class.

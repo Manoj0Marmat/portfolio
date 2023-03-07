@@ -1,0 +1,204 @@
+---
+title: Important Interview PC
+authors: ["Manoj Marmat"]
+---
+
+# Important Interview PC
+
+##### 1. Palindrome
+
+It is a word, phrase, number or ther sequence of characters
+that reads the same forward and backward.
+
+Examples :- `racecar`, `level`, `deified`, `madam`
+
+###### string
+
+> Note : `==` operator compares two string objects ,
+> which checks if the two objects are the same object in memory,
+> rather than checking if the strings have the same characters in the same order.
+> This means that even if the original string and its reverse have the same characters,
+> the condition `if(str==revStr)` will likely be false,
+> and the program will always output that the input string is not a palindrome.
+
+```java
+    String str = "racecar";
+
+    public static void palindrome(String str){
+        String revStr = "";
+        for(int i=0; i<str.length();++i){
+            revStr = revStr+str.charAt(i);
+        }
+        if(str.equals(revStr)) System.out.println(str+" is a palindrome ");
+        else System.out.println(str+" is not a palindrome ");
+    }
+```
+
+###### phrase
+
+```java
+    String str = "A man, a plan, a canal: Panama!";
+
+    public static void palindrome(String phr){
+        String filterPhr = "";
+        String revPhr = "";
+        for(int i=0;i<phr.length();++i){
+            if((phr.charAt(i)>='A'&&phr.charAt(i)<='Z')||(phr.charAt(i)>='a'&&phr.charAt(i)<='z')){
+                    filterPhr+=upperToLower(phr.charAt(i));
+            }
+        }
+        for(int i=0;i<filterPhr.length();++i){
+            revPhr = filterPhr.charAt(i)+revPhr;
+        }
+        if(filterPhr.equals(phr)) System.out.println(phr+" is a palindrome");
+        else System.out.println(phr+" is a palindrome");
+    }
+
+    public static char upperToLower(char ch){
+        if((ch>='A' && ch<='Z')) return (char)(ch+32);
+        return ch;
+    }
+```
+
+###### number
+
+```java
+    int num = 121;
+
+    public static void palindrome(int num){
+        int temp = num;
+        int revNum = 0;
+        while(temp!=0){
+            int rem = temp%10;
+            revNum = revNum*10+rem;
+            temp /= 10;
+        }
+        if(num==revNum) System.out.println(num+" is a palindrome ");
+        else System.out.println(num+" is not a palindrome ");
+    }
+```
+
+##### 2. Spy Number
+
+It is a positive integer where is the sum of its digits is equal to the product
+of its digit.
+
+Examples:-
+1124
+
+```lua
+1 + 1 + 2 + 4 = 8
+1 x 1 x 2 x 4 = 8
+```
+
+```java
+    int num = 1124;
+
+    public static void spyNumber(int num){
+        int temp=num, sum = 0, mul = 1;
+        while(temp!=0){
+            int rem = temp%10;
+            sum += rem;
+            mul *= rem;
+            temp /= 10;
+        }
+        if(sum==mul) System.out.println(num+" is a spy number");
+        else System.out.println(num+" is a spy number");
+    }
+```
+
+##### 4. Perfect Number
+
+It is a positive integer that is equal to sum of its proper divisors (exclude itself).
+
+Example:-
+6
+
+```lua
+1 + 2 + 3 = 6
+```
+
+```java
+    int n = 6;
+
+    public static void perfect(int n){
+        int sum=0;
+        for(int i=1;i<=(n)/2;++i){
+            if(n%i==0) sum+=i;
+        }
+        if(sum==n) System.out.println(n+" is a perfect num");
+        else System.out.println(n+" is not a perfect num");
+    }
+```
+
+##### 5. Perfect Square Number
+
+It is a number that can be expressed as the product of whole number multiplied
+by itself.
+
+Example:-
+4
+
+```lua
+2 * 2 = 4
+```
+
+1.
+
+```java
+    int n = 4;
+
+    public static void perfectSquare(int n){
+        if(Math.sqrt(n)%1.0==0.0) System.out.println(n+" is a perfect square number");
+        else System.out.println(n+" is not a perfect square number");
+    }
+```
+
+2.
+
+```java
+    int  n= 9;
+
+    public static void perfectSquare(int n){
+        int sqrt = (int)Math.sqrt(n);
+        if((sqrt*sqrt)==n) System.out.println(n+" is a perfect square number");
+        else System.out.println(n+" is not a perfect square number");
+
+    }
+```
+
+##### 6. Factorial of Number
+
+Example:-
+5! is 120
+
+```lua
+    5! = 5 x 4 x 3 x 2 x 1 = 120
+```
+
+1.
+
+```java
+    int n=5;
+
+    public static void fact(int n){
+        int fact = 1;
+        for(int i=1;i<=n;++i) fact*=i;
+        System.out.println(n+" factorial is : "+fact);
+    }
+```
+
+2.
+
+```java
+    int n = 5;
+
+    public static int fact(int n){
+        if(n==0) return 1;
+        return n*fact(n-1);
+    }
+```
+
+##### 7. Factorial of Number
+
+It is a number that has sum of the factorials of its digits equals to the number itself.
