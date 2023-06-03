@@ -65,6 +65,56 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+/* bars */
+.skill-sets{
+	display: flex;
+    justify-content: space-between;
+}
+.bar{
+    position: relative;
+    border: 2px solid #ffd700;
+    border-radius: 20px;
+}
+.bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color: #ffd700;
+}
+#csharp-bar{
+    animation: csharp-fill 2s forwards;
+}
+@keyframes csharp-fill{
+    100%{
+        width: 90%;
+    }
+}
+
+#dotnet-bar{
+    animation: dotnet-fill 2s forwards;
+}
+@keyframes dotnet-fill{
+    100%{
+        width: 70%;
+    }
+}
+#sql-bar{
+    animation: sql-fill 2s forwards;
+}
+@keyframes sql-fill{
+    100%{
+        width: 90%;
+    }
+}
+#webtech-bar{
+    animation: webtech-fill 2s forwards;
+}
+@keyframes webtech-fill{
+    100%{
+        width: 90%;
+    }
+}
 
 /* Basic */
 
